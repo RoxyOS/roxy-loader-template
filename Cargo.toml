@@ -8,3 +8,6 @@ edition = "2024"
 
 [dependencies]
 roxy-loader-api.path = "../roxy-loader/api"
+
+[build-dependencies]
+cargo-emit = "0.2.1"

@@ -958,6 +958,7 @@ version = "0.1.0"
 name = "roxy-loader-template"
 version = "0.1.0"
 dependencies = [
+ "cargo-emit",
  "roxy-loader-api",
 ]
 

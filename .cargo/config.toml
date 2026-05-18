@@ -1,0 +1,5 @@
+[unstable]
+bindeps = true
+
+[alias]
+xrun = "run -p xtask -- run"

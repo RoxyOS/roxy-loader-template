@@ -1,6 +1,10 @@
+[workspace]
+members = ["xtask"]
+
 [package]
 name = "roxy-loader-template"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+roxy-loader-api.path = "../roxy-loader/api"

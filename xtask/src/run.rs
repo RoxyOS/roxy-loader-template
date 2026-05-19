@@ -7,12 +7,12 @@ use crate::{run_command, run_vm::run_vm, utils::cargo_target_dir};
 
 pub fn run() -> Result<()> {
     run_command!("cargo build --target x86_64-unknown-none");
-    build_image(
+    let image = build_image(
         cargo_target_dir()?
             .join("x86_64-unknown-none")
             .join("debug")
             .join("roxy-loader-template"),
     )?;
-    run_vm(cargo_target_dir()?.join("image.img"))?;
+    run_vm(image)?;
     Ok(())
 }

@@ -3,13 +3,13 @@
 
 use core::panic::PanicInfo;
 
-use roxy_loader_api::{BootInfo, kernel_entry};
+use roxy_loader_api::{bootinfo::BootInfo, kernel_entry};
 
 kernel_entry!(kernel_main);
 
 fn kernel_main(bootinfo: &BootInfo) -> ! {
     unsafe {
-        let ptr = bootinfo.framebuffer.ptr;
+        let ptr = bootinfo.framebuffer.ptr();
 
         for i in 0..bootinfo.framebuffer.size {
             ptr.add(i).write_volatile(69);
@@ -20,6 +20,6 @@ fn kernel_main(bootinfo: &BootInfo) -> ! {
 }
 
 #[panic_handler]
-fn panic(_: &PanicInfo) -> ! {
+fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }

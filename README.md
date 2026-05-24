@@ -2,7 +2,7 @@
 
 Minimal kernel template using `roxy-loader` as the bootloader.
 
-When the kernel boots successfully, it fills the framebuffer with a solid color.
+When the kernel boots successfully, it draws a white line on the screen.
 
 ## Requirements
 

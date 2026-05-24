@@ -553,6 +553,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d9c4f5dac5e15c24eb999c26181a6ca40b39fe946cbe4c263c7209467bc83af2"
 
 [[package]]
+name = "framebuffer-draw"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d3a6353e69a2d82cb69a5f474ab0adf951dbb27663bec5be6098456ccadc6dcc"
+dependencies = [
+ "roxy-loader-api",
+]
+
+[[package]]
 name = "futures-core"
 version = "0.3.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1033,6 +1042,7 @@ name = "roxy-loader-template"
 version = "0.1.0"
 dependencies = [
  "cargo-emit",
+ "framebuffer-draw",
  "roxy-loader-api",
 ]
 

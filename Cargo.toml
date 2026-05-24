@@ -8,6 +8,7 @@ edition = "2024"
 
 [dependencies]
 roxy-loader-api = "0.2"
+framebuffer-draw = "0.1"
 
 [build-dependencies]
 cargo-emit = "0.2.1"
